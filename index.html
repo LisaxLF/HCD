@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Centered Design</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/modal.css">
+</head>
+
+<body>
+    <main id="kleding-matchen">
+        <div class="introductie">
+            <h1>Mijn kleding matchen</h1>
+            <p>
+                Welkom bij mijn kledingkast. Hier kan je je kleding matchen met je emotie van de dag. Klik op de knop
+                hieronder om je emotie in te spreken.
+            </p>
+        </div>
+        <div class="emoties">
+            <div class="humeur-wrapper">
+                <h2>Hoe voel ik mij vandaag?</h2>
+            </div>
+            <button id="startButton">Mijn emotie inspreken</button>
+        </div>
+        <div class="modal-popup" aria-hidden="true" tabindex="-1">
+            <div class="modal-content">
+                <h3>Ik voel mij vandaag:</h3>
+                <p id="herhaaldeOutput"></p>
+            </div>
+            <div class="modal-buttons">
+                <button class="correct-button" aria-label="Dit klopt">Dit klopt</button>
+                <button class="incorrect-button" aria-label="Dit klopt niet">Dit klopt niet</button>
+            </div>
+        </div>
+    </main>
+    <button class="navigatie-open">Navigatiemenu openen</button>
+    <header id="navigatie" aria-hidden="true">
+        <div class="tekst-wrapper">
+            <h2>Navigatie open</h2>
+            <p>Welkom bij de navigatie menu, hier kan je de verschillende opties langs</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="mijnkledingkast.html" aria-label="Ga naar mijn kledingkast">Mijn kledingkast</a></li>
+                <li><a href="index.html" aria-label="Ga naar Kleding matchen">Kleding matchen</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+<script src="scripts/script.js"></script>
+<script src="scripts/navigatie.js"></script>
+
+</html>

@@ -1,0 +1,55 @@
+.modal-popup {
+    display: none;
+}
+
+.modal-popup.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
+    overflow: auto;
+    background-color: #aeaeae;
+
+    .modal-content {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+
+        h3 {
+            font-size: 1.5em;
+        }
+
+        #herhaaldeOutput {
+            font-size: 1.4em;
+        }
+    }
+
+    .modal-buttons {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: .8em;
+
+        button {
+            width: 100%;
+            padding: .5em;
+            background-color: #f1f1f1;
+            border: none;
+        }
+    }
+}
+
+main:has(.modal-popup.active) .introductie,
+main:has(.modal-popup.active) .emoties {
+    filter: blur(10px);
+}

@@ -1,0 +1,141 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #333;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+a {
+    text-decoration: none;
+    background-color: #333;
+    padding: .5rem;
+    color: white;
+    width: 100%;
+    text-align: center
+}
+
+button {
+    cursor: pointer;
+    font-size: medium;
+    border: none;
+}
+
+button.navigatie-open {
+    cursor: pointer;
+    font-size: medium;
+    background-color: #333;
+    padding: 1rem;
+    color: white;
+    width: 100%;
+    text-align: center;
+
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* HEADER */
+header {
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+    display: none;
+    gap: 1rem;
+    flex-direction: column;
+    transition: all .3s ease-in-out;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+    }
+}
+
+/* Add your custom styles here */
+/* MAIN */
+main {
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+
+    position: relative;
+}
+
+.introductie {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.emoties {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+
+    .humeur-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.tekst-wrapper {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#startButton {
+    width: 80%;
+    aspect-ratio: 1;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+}
+
+#output {
+    font-size: 2.5rem;
+}
+
