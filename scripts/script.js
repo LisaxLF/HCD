@@ -33,16 +33,16 @@ if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
     };
 
     // Event listener for when the user holds down the start button
-    startButton.addEventListener('mousedown', function () {
+    startButton.addEventListener('touchstart', function () {
         // Vibratriceer de telefoon
         navigator.vibrate(100);
-        
+
         // Start speech recognition
         recognition.start();
     });
 
     // Event listener for when the user releases the start button
-    startButton.addEventListener('mouseup', function () {
+    startButton.addEventListener('touchend', function () {
         // Stop speech recognition
         recognition.stop();
     });
