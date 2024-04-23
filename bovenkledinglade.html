@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Centered Design</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/modal.css">
+</head>
+
+<body>
+    <main id="mijn-kledingkast">
+        <div class="introductie">
+            <h1>Mijn bovenkleding lade</h1>
+            <a href="mijnkledingkast.html" aria-label="Ga terug naar mijn kledingkast">Terug</a>
+            <p>
+                Welkom bij mijn bovenkleding lade, hier kan je je kleding bekijken en aanpassen. Scroll door de verschillende
+                lades om je kleding te bekijken.
+            </p>
+        </div>
+        <div class="kledingstukken">
+            <div class="broeken">
+                <h2>Broeken</h2>
+                <div class="kledingstuk">
+                    <p class="kleding-name"></p>
+                    <button class="item-bewerken">
+                    </button>
+                </div>
+            </div>
+            <div class="rokken">
+                <h2>Rokken</h2>
+                <div class="kledingstuk">
+                    <button class="details">
+                        gedetailleerde beschrijving
+                    </button>
+                </div>
+            </div>
+            <div class="pantys">
+                <h2>Pantys</h2>
+                <div class="kledingstuk">
+                    <button class="details">
+                        gedetailleerde beschrijving
+                    </button>
+                </div>
+            </div>
+        </div>
+        <a href="#mijn-kledingkast" aria-label="Ga terug omhoog">Terug omhoog</a>
+    </main>
+    <button class="navigatie-open">Navigatiemenu openen</button>
+    <header id="navigatie" aria-hidden="true">
+        <div class="tekst-wrapper">
+            <h2>Navigatie open</h2>
+            <p>Welkom bij de navigatie menu, hier kan je de verschillende opties langs</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="mijnkledingkast.html" aria-label="Ga naar mijn kledingkast">Mijn kledingkast</a></li>
+                <li><a href="index.html" aria-label="Ga naar Kleding matchen">Kleding matchen</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+<script src="scripts/script.js"></script>
+<script src="scripts/navigatie.js"></script>
+<script src="scripts/api.js"></script>
+
+</html>

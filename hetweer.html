@@ -11,10 +11,14 @@
 
 <body>
     <main>
-        <h1>Weather Information</h1>
-        <p>Location: <span id="location"></span></p>
-        <p>Temperature: <span id="temperature"></span>°C</p>
-        <p>Condition: <span id="condition"></span></p>
+        <h1>Het weer vandaag</h1>
+        <div id="weer-beschrijving">
+            
+        </div>
+        <div class="opties">
+            <button class="aanpassen" aria-label="Pas mijn kleding aan op basis van het weer">Mijn kleding aanpassen</button>
+            <button class="nietaanpassen" aria-label="Houd mijn kleding zoals het is, ongeacht het weer">Mijn kleding niet aanpassen</button>
+        </div>
     </main>
     <button class="navigatie-open">Navigatiemenu openen</button>
     <header id="navigatie" aria-hidden="true">
@@ -31,4 +35,6 @@
     </header>
 </body>
 <script src="scripts/navigatie.js"></script>
+<script src="scripts/api.js"></script>
+
 </html>

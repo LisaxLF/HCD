@@ -10,30 +10,22 @@
 </head>
 
 <body>
-    <main id="kleding-matchen">
+    <main id="mijn-kledingkast">
         <div class="introductie">
-            <h1>Mijn kleding matchen</h1>
+            <h1>Mijn bovenkledinglade</h1>
             <p>
-                Welkom bij mijn kledingkast. Hier kan je je kleding matchen met je emotie van de dag. Klik op de knop
-                hieronder om je emotie in te spreken.
+                Welkom bij de onderstukken la, hier vind je een overzicht van al je kledingstukken die behoren tot deze categorie. 
+                Hier kan je 
             </p>
         </div>
-        <div class="emoties">
-            <div class="humeur-wrapper">
-                <h2>Hoe voel ik mij vandaag?</h2>
-            </div>
-            <button id="startButton">Mijn emotie inspreken</button>
+        <div class="kledinglades">
+            <a href="bovenkledinglade.html" aria-label="Ga naar deze lade">Bovenkleding lade</a>
+            <a href="" aria-label="Ga naar deze lade">Onderkleding lade</a>
+            <a href="" aria-label="Ga naar deze lade">Setjes lade</a>
+            <a href="" aria-label="Ga naar deze lade">Schoenen lade</a>
+            <a href="" aria-label="Ga naar deze lade">Jassen lade</a>
         </div>
-        <div class="modal-popup" aria-hidden="true" tabindex="-1">
-            <div class="modal-content">
-                <h3>Ik voel mij vandaag:</h3>
-                <p id="herhaaldeOutput"></p>
-            </div>
-            <div class="modal-buttons">
-                <button class="correct-button" aria-label="Dit klopt">Dit klopt</button>
-                <button class="incorrect-button" aria-label="Dit klopt niet">Dit klopt niet</button>
-            </div>
-        </div>
+        <button aria-label="Voeg kleding item toe">een item toevoegen</button>
     </main>
     <button class="navigatie-open">Navigatiemenu openen</button>
     <header id="navigatie" aria-hidden="true">
@@ -52,4 +44,5 @@
 <script src="scripts/script.js"></script>
 <script src="scripts/navigatie.js"></script>
 <script src="scripts/api.js"></script>
+
 </html>

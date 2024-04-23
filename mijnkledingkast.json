@@ -1,0 +1,100 @@
+{
+"kledingstukken": [
+        {
+            "type": "shirt",
+            "categorie": "bovenkleding",
+            "patroon": "gestreept",
+            "kleur": "blauw",
+            "maat": "M",
+            "materiaal": "katoen",
+            "mouwlengte": "korte mouwen",
+            "seizoen": "lente/zomer",
+            "samenvatting": "Een gestreept blauw shirt met korte mouwen, gemaakt van katoen. Perfect voor casual gelegenheden tijdens de lente/zomer."
+        },
+        {
+            "type": "shirt",
+            "categorie": "bovenkleding",
+            "patroon": "effen",
+            "kleur": "wit",
+            "maat": "L",
+            "materiaal": "katoen",
+            "mouwlengte": "korte mouwen",
+            "seizoen": "lente/zomer",
+            "samenvatting": "Een effen wit shirt met korte mouwen, gemaakt van katoen. Een veelzijdige keuze voor casual outfits tijdens de lente/zomer."
+        },
+        {
+            "type": "shirt",
+            "categorie": "bovenkleding",
+            "patroon": "geruit",
+            "kleur": "rood/zwart",
+            "maat": "XL",
+            "materiaal": "flanel",
+            "mouwlengte": "lange mouwen",
+            "seizoen": "herfst/winter",
+            "samenvatting": "Een geruit rood-zwart shirt met lange mouwen, gemaakt van flanel. Ideaal voor warmte en stijl tijdens de herfst/winter."
+        },
+        {
+            "type": "broek",
+            "categorie": "onderkleding",
+            "stijl": "chino",
+            "kleur": "beige",
+            "maat": "34",
+            "materiaal": "katoen",
+            "seizoen": "lente/zomer",
+            "samenvatting": "Een beige chino broek in maat 34, gemaakt van katoen. Perfect voor een casual zomerlook."
+        },
+        {
+            "type": "broek",
+            "stijl": "joggingbroek",
+            "categorie": "onderkleding",
+            "kleur": "grijs",
+            "maat": "M",
+            "materiaal": "katoen",
+            "seizoen": "alle seizoenen",
+            "samenvatting": "Een grijze joggingbroek in maat M, gemaakt van comfortabel katoen. Geschikt voor alle seizoenen, ideaal voor ontspannen dagen."
+        },
+        {
+            "type": "broek",
+            "categorie": "onderkleding",
+            "stijl": "skinny jeans",
+            "kleur": "zwart",
+            "maat": "30",
+            "materiaal": "denim",
+            "seizoen": "alle seizoenen",
+            "samenvatting": "Een zwarte skinny jeans in maat 30, gemaakt van denim. Een tijdloze keuze die geschikt is voor alle seizoenen."
+        },
+        {
+            "type": "trui",
+            "categorie": "bovenkleding",
+            "stijl": "crewneck",
+            "kleur": "grijs",
+            "maat": "L",
+            "materiaal": "wol",
+            "mouwlengte": "lange mouwen",
+            "seizoen": "herfst/winter",
+            "samenvatting": "Een grijze crewneck trui met lange mouwen, gemaakt van warme wol. Ideaal voor koudere dagen in de herfst/winter."
+        },
+        {
+            "type": "trui",
+            "categorie": "bovenkleding",
+            "stijl": "hoodie",
+            "kleur": "zwart",
+            "maat": "M",
+            "materiaal": "katoen",
+            "mouwlengte": "lange mouwen",
+            "seizoen": "alle seizoenen",
+            "samenvatting": "Een zwarte hoodie met lange mouwen, gemaakt van comfortabel katoen. Geschikt voor alle seizoenen, perfect voor een casual look."
+        },
+        {
+            "type": "trui",
+            "categorie": "bovenkleding",
+            "stijl": "coltrui",
+            "kleur": "navy",
+            "maat": "XL",
+            "materiaal": "wol",
+            "mouwlengte": "lange mouwen",
+            "seizoen": "herfst/winter",
+            "samenvatting": "Een navy coltrui met lange mouwen, gemaakt van warme wol. Stijlvol en geschikt voor koude dagen in de herfst/winter."
+        }
+    ]
+}
