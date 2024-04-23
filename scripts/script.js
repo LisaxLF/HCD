@@ -32,8 +32,11 @@ if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
         console.error('Speech recognition error:', event.error);
     };
 
-    // Event listener for when the user holds down the start button
-    startButton.addEventListener('touchstart', function () {
+    // Event listener for when the user touches the start button
+    startButton.addEventListener('touchstart', function (event) {
+        // Prevent default touch behavior
+        event.preventDefault();
+
         // Vibratriceer de telefoon
         navigator.vibrate(100);
 
@@ -42,7 +45,10 @@ if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
     });
 
     // Event listener for when the user releases the start button
-    startButton.addEventListener('touchend', function () {
+    startButton.addEventListener('touchend', function (event) {
+        // Prevent default touch behavior
+        event.preventDefault();
+
         // Stop speech recognition
         recognition.stop();
     });
