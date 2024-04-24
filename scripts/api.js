@@ -32,7 +32,8 @@ function fetchWeatherData(latitude, longitude, date) {
 
 // Functie om weerdata te verwerken en weer te tonen in de HTML
 function processWeatherData(data) {
-    const { temp, tempmin, tempmax, description, timezone } = data.days[0];
+    const { temp, tempmin, tempmax, description } = data.days[0];
+    const { timezone } = data;
     const city = timezone.split("/").pop();
     const tempRounded = Math.round(temp);
     const tempMinRounded = Math.round(tempmin);
@@ -52,11 +53,15 @@ function processWeatherData(data) {
     btnAanpassen.addEventListener('click', function () {
         // Pas filters aan voor kleding
         checkTempCategory(tempRounded);
+
+        // ga naar het nieuwe href
+        window.location.href = "outfitresult.html";
     });
 
     // Event listener voor niet aanpassen van het weer
     btnNietAanpassen.addEventListener('click', function () {
         // Doe hier iets anders als de gebruiker het weer niet wil aanpassen
+        // Randomized filters voor de kleding
     });
 }
 
@@ -64,8 +69,11 @@ function processWeatherData(data) {
 function checkTempCategory(temp) {
     console.log('Temperatuur:', temp);
     // Bepaal de categorie voor de temperatuur
-    if (temp <= 10) {
+    if (temp <= 5) {
         console.log('filters zijn: lange mouwen, truien, jassen, sjaals, handschoenen');
+    } else if (temp > 5 && temp <= 10) {
+        console.log('filters zijn: lange mouwen, truien, jassen, sjaals');
+
     } else if (temp > 10 && temp <= 15) {
         console.log('filters zijn: lange mouwen, korte mouwen, truien, jassen');
     } else {
@@ -74,15 +82,19 @@ function checkTempCategory(temp) {
 }
 
 // Fetching the kleding kast data
-fetch('mijnkledingkast.json')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
+function fetchKledingKastData() {
+    fetch('mijnkledingkast.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
 
-        // Verdeel de data in de verschillende categorieën
+            // Verdeel de data in de verschillende categorieën
 
-        // Doe hier iets met de verdeelde data
-    })
-    .catch(error => {
-        console.error('Fout bij het ophalen van kledingkastdata:', error);
-    });
+            // Doe hier iets met de verdeelde data
+        })
+        .catch(error => {
+            console.error('Fout bij het ophalen van kledingkastdata:', error);
+        });
+}
+
+// Import kleuren data
