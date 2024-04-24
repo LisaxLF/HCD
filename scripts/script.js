@@ -32,11 +32,8 @@ if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
         console.error('Speech recognition error:', event.error);
     };
 
-    // Variabele om de timer bij te houden
-    let recognitionTimer;
-
     // Event listener voor het klikken op de start knop
-    startButton.addEventListener('click', function (event) {
+    startButton.addEventListener('mousedown', function (event) {
         // Voorkom standaard klikgedrag
         event.preventDefault();
 
@@ -45,25 +42,15 @@ if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
 
         // Start spraakherkenning
         recognition.start();
-
-        // Start een timer van 5 seconden voor spraakherkenning
-        recognitionTimer = setTimeout(function () {
-            // Stop spraakherkenning als er geen spraak is gedetecteerd na 5 seconden
-            recognition.stop();
-            clearTimeout(recognitionTimer); // Wis de timer
-        }, 5000);
     });
 
     // Event listener voor het loslaten van de start knop
-    startButton.addEventListener('click', function (event) {
+    startButton.addEventListener('mouseout', function (event) {
         // Voorkom standaard klikgedrag
         event.preventDefault();
 
         // Stop spraakherkenning
         recognition.stop();
-
-        // Wis de timer als de gebruiker handmatig stopt met opnemen
-        clearTimeout(recognitionTimer);
     });
 
 } else {}
@@ -158,3 +145,4 @@ function closeModalPopup() {
 function nextPage() {
     window.location.href = 'hetweer.html';
 }
+

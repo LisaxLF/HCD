@@ -134,6 +134,7 @@ main {
 
 #startButton {
     width: 80%;
+    max-width: 250px;
     aspect-ratio: 1;
     background-color: #f1f1f1;
     border-radius: 50%;
@@ -178,4 +179,61 @@ main {
 
 }
 
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+button {
+    font-size: 1.2rem;
+}
+
+#startButton {
+    width: 40%;
+}
+
 /* Iphone screen */
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    #startButton {
+        width: 40%;
+    }
+}
+
+/* Height breakpoint */
+@media screen and (max-height: 500px) {
+    main {
+        height: auto;
+    }
+}
