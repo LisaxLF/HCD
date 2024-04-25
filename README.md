@@ -110,5 +110,8 @@ Na het bespreken van deze punten uit de tests van mijn klasgenoten, kwam naar vo
 
 
 ### Laatste iteratie
-Voor mijn laatste iteratie heb ik ervoor gezorgd dat het matching-gedeelte werkte, zodat het eindproduct uiteindelijk ook echt kon functioneren. Dit kostte veel tijd, maar dankzij de goede voorbereiding kon ik goed vooruit. Mijn website staat nu online en je kunt navigeren en een outfit matchen met de bijbehorende emotie. Tot nu toe heb ik alleen de emotie "vrolijk" uitgewerkt, maar met meer tijd had ik ook de rest kunnen implementeren.
+Na het bespreken van deze punten uit de tests van mijn klasgenoten, heb ik ervoor gekozen om geen spraakfunctionaliteit toe te voegen aan mijn prototype. Uit de feedback kwam naar voren dat spraakopnamen en complexe spraakgestuurde functies niet ideaal waren voor Petra. Ze gaf de voorkeur aan een eenvoudigere benadering met een vast aantal opties. Desondanks waardeerde ze het idee van het systeem en merkte ze op dat de navigatie over het algemeen goed verliep, met aandachtspunten voor duidelijkheid bij knoppen voor heen en terug navigeren.
+
+Voor mijn laatste iteratie heb ik daarom ook gezorgd dat het matching-gedeelte werkte, zodat het eindproduct uiteindelijk ook echt kon functioneren. Dit kostte veel tijd, maar dankzij de goede voorbereiding kon ik goed vooruit. Mijn website staat nu online en je kunt navigeren en een outfit matchen met de bijbehorende emotie. Tot nu toe heb ik alleen de emotie "vrolijk" uitgewerkt, maar met meer tijd had ik ook de rest kunnen implementeren.
+
 
