@@ -18,21 +18,31 @@
                 hieronder om je emotie in te spreken.
             </p>
         </div>
-        <div class="emoties">
+        <div class="emoties-wrapper">
             <div class="humeur-wrapper">
                 <h2>Hoe voel ik mij vandaag?</h2>
             </div>
-            <button id="startButton">Mijn emotie inspreken</button>
-        </div>
-        <div class="modal-popup" aria-hidden="true" tabindex="-1">
-            <div class="modal-content">
-                <h3>Ik voel mij vandaag:</h3>
-                <p id="herhaaldeOutput"></p>
+            <div class="emotie">
+                <input type="radio" id="vrolijk" name="emotie" value="vrolijk">
+                <label for="vrolijk">Vrolijk</label>
             </div>
-            <div class="modal-buttons">
-                <button class="correct-button" aria-label="Dit klopt">Dit klopt</button>
-                <button class="incorrect-button" aria-label="Dit klopt niet">Dit klopt niet</button>
+            <div class="emotie">
+                <input type="radio" id="energiek" name="emotie" value="energiek">
+                <label for="energiek">Energiek</label>
             </div>
+            <div class="emotie">
+                <input type="radio" id="romantisch" name="emotie" value="romantisch">
+                <label for="romantisch">Romantisch</label>
+            </div>
+            <div class="emotie">
+                <input type="radio" id="comfortabel" name="emotie" value="comfortabel">
+                <label for="comfortabel">Comfortabel</label>
+            </div>
+            <div class="emotie">
+                <input type="radio" id="elegant" name="emotie" value="elegant">
+                <label for="elegant">Elegant</label>
+            </div>
+            <button type="submit" id="emotie-knop" aria-label="Deze emotie opsturen">Deze emotie kiezen</button>
         </div>
     </main>
     <button class="navigatie-open">Navigatiemenu openen</button>
@@ -51,5 +61,5 @@
 </body>
 <script src="scripts/script.js"></script>
 <script src="scripts/navigatie.js"></script>
-<script src="scripts/api.js"></script>
+
 </html>

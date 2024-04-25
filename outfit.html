@@ -10,22 +10,25 @@
 </head>
 
 <body>
-    <main id="mijn-kledingkast">
+    <main id="outfit">
         <div class="introductie">
-            <h1>Mijn kledingkast</h1>
+            <h1>Mijn outfit voor
+                vandaag is</h1>
             <p>
-                Welkom bij mijn kledingkast, hier kan je je kleding op categorie bekijken. Klik op de verschillende lades
-                om de individuele kleding te bekijken.
+                Hier is je gegeneerde outfit. Deze kan je nog aanpassen als je dat wilt.
             </p>
         </div>
-        <div class="kledinglades">
-            <a href="bovenkledinglade.html" aria-label="Ga naar deze lade">Bovenkleding lade</a>
-            <a href="" aria-label="Ga naar deze lade">Onderkleding lade</a>
-            <a href="" aria-label="Ga naar deze lade">Setjes lade</a>
-            <a href="" aria-label="Ga naar deze lade">Schoenen lade</a>
-            <a href="" aria-label="Ga naar deze lade">Jassen lade</a>
+        <div class="overzicht-keuzes" aria-label="Dit is het overzicht">
+            <p><strong>Ik voel mij vandaag:</strong></p><span id="emotie"></span>
+            <p><strong>weer vandaag is:</strong></p><span id="weer"></span>
         </div>
-        <button aria-label="Voeg kleding item toe">een item toevoegen</button>
+        <div class="gegeneerde-outfit">
+        </div>
+        <div class="opties">
+            <button class="outfitOpnieuw" aria-label="Mijn outfit opnieuw genereren">Mijn outfit opnieuw genereren</button>
+            <button class="outfitAanpassen" aria-label="Mijn outfit aanpassen">Mijn outfit aanpassen</button>
+            <button class="outfitGeslaagd" aria-label="Mijn outfit is geslaagd">Mijn outfit is geslaagd</button>
+        </div>
     </main>
     <button class="navigatie-open">Navigatiemenu openen</button>
     <header id="navigatie" aria-hidden="true">
@@ -41,8 +44,7 @@
         </nav>
     </header>
 </body>
-<script src="scripts/script.js"></script>
+<script src="scripts/outfit.js" defer></script>
 <script src="scripts/navigatie.js"></script>
-<script src="scripts/api.js"></script>
 
 </html>

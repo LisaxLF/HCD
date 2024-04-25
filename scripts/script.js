@@ -1,99 +1,131 @@
 const startButton = document.getElementById('startButton');
 const herhaaldeOutput = document.getElementById('herhaaldeOutput');
 
-// Modal popup
-const modal = document.querySelector('.modal-popup');
-const btnCorrect = document.querySelector('.modal-popup .correct-button');
-const btnIncorrect = document.querySelector('.modal-popup .incorrect-button');
+// Submit button
+const submitBtn = document.querySelector('#emotie-knop');
+const radioBtnMood = document.querySelectorAll('input[type="radio"]');
 
-// Controleer of de browser spraakherkenning ondersteunt
-if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
-    const recognition = new(window.SpeechRecognition || window.webkitSpeechRecognition)();
+// Buttons voor het aanpassen van het weer
+const btnAanpassen = document.querySelector('.aanpassen');
+const btnNietAanpassen = document.querySelector('.nietaanpassen');
 
-    // Stel de taal in voor spraakherkenning
-    recognition.lang = 'nl-NL';
+console.log(radioBtnMood);
 
-    // Event listener voor wanneer spraak wordt herkend
-    recognition.onresult = async function (event) {
-        const speechToText = event.results[0][0].transcript;
+// Als de buttons checked zijn dan moet de submit text veranderd worden
+radioBtnMood.forEach((btn) => {
+    const submitBtn = document.querySelector('#emotie-knop');
+    const value = btn.value;
 
-        // Uitspraak van de ingevoerde tekst
-        const speakTextResult = await speakText(speechToText);
+    btn.addEventListener('change', function () {
+        // bij elke verandering van de radio buttons clear the localStorage
+        localStorage.clear();
 
-        // Als dit compleet is dan modal pop up open
-        openModalPopup(speakTextResult);
 
-        // Bepaal het humeur van de gebruiker
-        determineMood(speakTextResult);
-    };
+        submitBtn.innerHTML = `De emotie ${value} versturen`;
+        submitBtn.setAttribute('aria-label', `Ga door met ${value}`);
+        const mood = value;
 
-    // Event listener voor fouten
-    recognition.onerror = function (event) {
-        console.error('Speech recognition error:', event.error);
-    };
-
-    // Event listener voor het klikken op de start knop
-    startButton.addEventListener('mousedown', function (event) {
-        // Voorkom standaard klikgedrag
-        event.preventDefault();
-
-        // Vibratriceer de telefoon
-        navigator.vibrate(100);
-
-        // Start spraakherkenning
-        recognition.start();
+        submitBtn.addEventListener('click', function () {
+            nextPage(mood);
+        });
     });
+});
 
-    // Event listener voor het loslaten van de start knop
-    startButton.addEventListener('mouseout', function (event) {
-        // Voorkom standaard klikgedrag
-        event.preventDefault();
+// Functie voor het laden van de volgende pagina
+async function nextPage(mood) {
+    console.log('Mood:', mood);
 
-        // Stop spraakherkenning
-        recognition.stop();
-    });
+    // Roep bepaalHumeur aan om het humeur van de gebruiker te bepalen
+    const humeurfilters = await bepaalHumeur(mood);
 
-} else {}
+    // Navigeer naar de volgende pagina met parameters
+    window.location.href = `hetweer.html?mood=${mood}`;
+}
 
-// Functie om tekst uit te spreken
-async function speakText(text) {
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'nl-NL';
-    speechSynthesis.speak(utterance);
+// Fetching the kleding kast data
+function fetchKledingKastData(kleuren, patroon) {
+    fetch('mijnkledingkast.json')
+        .then(response => response.json())
+        .then(data => {
+            console.log("de data is:", data);
 
-    return text;
+            // Filter de kledingstukken op basis van de kleur
+            const gefilterdeKledingKleuren = data.filter(kledingstuk => {
+                if (kledingstuk.kleur.includes(',')) {
+                    // Als het kledingstuk meerdere kleuren heeft, split deze dan en controleer of ten minste één kleur overeenkomt
+                    const kleurenArray = kledingstuk.kleur.split(',');
+                    return kleurenArray.some(kleur => kleuren.includes(kleur.trim()));
+                } else {
+                    // Als het kledingstuk slechts één kleur heeft, controleer dan direct
+                    return kleuren.includes(kledingstuk.kleur.trim());
+                }
+            });
+
+            // Filter de kledingstukken op basis van het patroon
+            let gefilterdeKledingPatroon = gefilterdeKledingKleuren.filter(kledingstuk => patroon.includes(kledingstuk.patroon));
+
+            // Controleer of er minstens één kledingstuk van elke categorie is
+            const categorieenSet = new Set(data.map(item => item.categorie));
+            const isCompleteOutfit = Array.from(categorieenSet).every(categorie => gefilterdeKledingPatroon.some(kledingstuk => kledingstuk.categorie === categorie));
+
+            if (isCompleteOutfit) {
+                console.log('Je hebt een complete outfit!');
+                const gefilterdeDataMood = gefilterdeKledingPatroon
+
+                // Leeg de localStorage
+                localStorage.clear();
+
+                // Haal de bestaande data op uit de localStorage
+                let bestaandeData = JSON.parse(localStorage.getItem('gefilterdeDataMood'));
+
+                // Controleer of er al gegevens zijn opgeslagen
+                if (bestaandeData) {
+                    // Vervang de bestaande data door de nieuwe gefilterde data
+                    bestaandeData = gefilterdeKledingPatroon;
+                } else {
+                    // Als er nog geen gegevens zijn opgeslagen, sla dan de nieuwe gefilterde data op
+                    bestaandeData = gefilterdeKledingPatroon;
+                }
+
+                // Sla de bijgewerkte gegevens + mood op in de localStorage
+                localStorage.setItem('gefilterdeDataMood', JSON.stringify(bestaandeData));
+
+
+                console.log('Gefilterde data op mood:', gefilterdeDataMood);
+
+
+            } else {
+                console.log('Je hebt geen complete outfit!');
+            }
+        })
+        .catch(error => {
+            console.error('Fout bij het ophalen van kledingkastdata:', error);
+        });
 }
 
 // Functie om humeur te bepalen
-function determineMood(text) {
-    console.log('Tekst:', text);
-
+async function bepaalHumeur(mood) {
     // Vrolijk - vrolijke, heldere kleuren en lichte, vrolijke stoffen en patronen
-    // Kalm - koelere, rustige kleuren en eenvoudige, minimalistische stijlen
     // Energiek - heldere, levendige kleuren en actieve, sportieve stijlen
     // Romantisch - zachte tinten, pastelkleuren, en delicate stoffen zoals kant en zijde
-    // Neutraal - donkere of gedempte kleuren en eenvoudige, klassieke stijlen
     // Comfortabel - zachte, comfortabele stoffen en losse, relaxte stijlen
     // Elegant - Verfijnde stijlen met hoogwaardige stoffen en een klassieke uitstraling, vaak in donkere of neutrale kleuren.
 
     // Vrolijk
-    if (text.includes('vrolijk')) {
+    if (mood.includes('vrolijk')) {
         document.body.style.backgroundColor = '#FFD700';
 
         // Array van kleuren die vrolijkheid uitstralen
-        const kleuren = ['rood', 'oranje', 'geel', 'groen', 'blauw', 'indigo', 'violet'];
-    }
+        const kleuren = ['rood', 'oranje', 'geel', 'groen', 'blauw', 'lichtblauw', 'donkerblauw', 'indigo', 'violet'];
+        const patroon = ['effen', 'gestreept', 'wassing', 'geruit', 'bloemen', 'abstract', 'geometrisch']
 
-    // Kalm
-    if (text.includes('kalm')) {
-        document.body.style.backgroundColor = '#87CEEB';
+        // stuur de kleuren, type kleding en patronen naar de API om kledingstukken te filteren
+        fetchKledingKastData(kleuren, patroon);
 
-        // Array van kleuren die kalmte uitstralen
-        const kleuren = ['blauw', 'groen', 'paars', 'wit', 'grijs', 'zilver', 'turquoise'];
     }
 
     // Energiek
-    if (text.includes('energiek')) {
+    if (mood.includes('energiek')) {
         document.body.style.backgroundColor = '#FF6347';
 
         // Array van kleuren die energie uitstralen
@@ -101,48 +133,31 @@ function determineMood(text) {
     }
 
     // Romantisch
-    if (text.includes('romantisch')) {
+    if (mood.includes('romantisch')) {
         document.body.style.backgroundColor = '#FF69B4';
 
         // Array van kleuren die romantiek uitstralen
         const kleuren = ['roze', 'rood', 'paars', 'zilver', 'goud', 'ivoor', 'perzik'];
 
         // Stuur deze kleuren naar de API om kledingstukken te filteren
-        
-    }
 
-    // Neutraal
-    if (text.includes('neutraal')) {
-        document.body.style.backgroundColor = '#808080';
-
-        // Array van kleuren die neutraliteit uitstralen
-        const kleuren = ['wit', 'zwart', 'grijs', 'bruin', 'beige', 'taupe', 'ivoor'];
     }
 
     // Comfortabel
-    if (text.includes('comfortabel')) {
+    if (mood.includes('comfortabel')) {
         document.body.style.backgroundColor = '#FFA07A';
 
         // Array van kleuren die comfort uitstralen
         const kleuren = ['grijs', 'rood', 'groen', 'blauw', 'indigo'];
     }
 
+    // Elegant
+    if (mood.includes('elegant')) {
+        document.body.style.backgroundColor = '#800080';
+
+        // Array van kleuren die elegantie uitstralen
+        const kleuren = ['zwart', 'wit', 'grijs', 'zilver', 'goud', 'ivoor', 'beige'];
+    }
+
+    return mood;
 }
-
-function openModalPopup(speakTextResult) {
-    modal.classList.add('active');
-    herhaaldeOutput.innerHTML = speakTextResult;
-
-    // Voeg een event listener toe aan de knoppen in de modale venster om de modale venster te sluiten
-    btnCorrect.addEventListener('click', nextPage);
-    btnIncorrect.addEventListener('click', closeModalPopup);
-}
-
-function closeModalPopup() {
-    modal.classList.remove('active');
-}
-
-function nextPage() {
-    window.location.href = 'hetweer.html';
-}
-
