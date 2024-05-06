@@ -114,4 +114,43 @@ Na het bespreken van deze punten uit de tests van mijn klasgenoten, heb ik ervoo
 
 Voor mijn laatste iteratie heb ik daarom ook gezorgd dat het matching-gedeelte werkte, zodat het eindproduct uiteindelijk ook echt kon functioneren. Dit kostte veel tijd, maar dankzij de goede voorbereiding kon ik goed vooruit. Mijn website staat nu online en je kunt navigeren en een outfit matchen met de bijbehorende emotie. Tot nu toe heb ik alleen de emotie "vrolijk" uitgewerkt, maar met meer tijd had ik ook de rest kunnen implementeren.
 
+### Design principles
+
+Study situation:
+
+Gezien Petra's ervaring en feedback, is het duidelijk dat ze de voorkeur geeft aan interfaces die logisch en intuïtief zijn. Websites of apps moeten een duidelijke navigatiestructuur hebben en de informatie moet op een gestructureerde en voorspelbare manier worden gepresenteerd. Bovendien moet de interface consistent zijn in zijn ontwerp en functionaliteit, met een duidelijke labeling en benaming van knoppen en andere interactieve elementen.
+
+Daarnaast is Petra gewend om hulpmiddelen zoals een braillelezer en spraaksoftware te gebruiken. Het ontwerp moet deze technologieën ondersteunen door het gebruik van toegankelijke webstandaarden en -technieken. Het moet ook zorgen voor een goede integratie van haptische feedback en audio-beschrijvingen om de interactie en ervaring voor Petra te verbeteren.
+
+Tenslotte, gezien Petra's behoeften en voorkeuren op het gebied van kledingselectie, moet het ontwerp rekening houden met de verschillende kenmerken en categorieën van kleding, evenals met de verschillende situaties en omstandigheden waarin ze kunnen worden gedragen. Het moet ook rekening houden met factoren zoals het weer en Petra's gevoelens of stemming op een bepaalde dag.
+
+**Ignoring Conventions**
+
+In het ontwerpproces zijn er diverse stappen ondernomen die de conventionele ontwerppraktijken trotseren, specifiek om beter af te stemmen op de unieke behoeften van Petra. Dit omvat:
+
+1. **Gevoelens als navigatie**: Het gebruik van emoties als basis voor het navigeren en selecteren van kleding is een unieke benadering die afwijkt van de conventionele manier van categoriseren op basis van kledingtype of kleur.
+2. **Haptische feedback**: Hoewel dit steeds vaker wordt gebruikt in ontwerp, blijft het een minder conventionele functie. Het gebruik van haptische feedback helpt Petra om een beter gevoel van navigatie en interactie binnen de interface te krijgen.
+3. **Spraaksoftware**: Het integreren van spraaksoftware om de visuele informatie van de interface om te zetten naar hoorbare informatie, helpt Petra effectiever te interageren met het systeem, ondanks haar visuele beperking. Dit is geen standaardfunctie in veel webontwerpen.
+4. **Weerinformatie**: Het toevoegen van weerinformatie aan de interface om Petra te helpen bij het kiezen van geschikte kleding op basis van de weersomstandigheden van de dag, is eveneens een afwijking van conventionele kleding-apps of websites.
+5. **Geurassociaties**: Het koppelen van geuren aan verschillende kledingstukken of outfits is een zeer unieke functie die zelden wordt gezien in conventionele kleding-apps of websites.
+
+### Prioritise identity
+
+In het ontwerp zijn verschillende stappen genomen om Petra's identiteit te prioriteren:
+
+1. **Emoties als Navigatie**: Het idee om emoties te gebruiken als basis voor het navigeren en selecteren van kleding is afgestemd op Petra's unieke behoeften en ervaringen. Deze benadering respecteert haar persoonlijke manier van kledingselectie en geeft haar de mogelijkheid om kledingkeuzes te maken op basis van hoe ze zich voelt.
+2. **Haptische Feedback en Spraaksoftware**: Het ontwerp neemt Petra's gebruik van hulpmiddelen zoals een braillelezer en spraaksoftware in overweging. Het zorgt voor integratie van deze technologieën en verbetert de interactie en ervaring voor Petra.
+3. **Weerinformatie**: Het toevoegen van weerinformatie aan de interface helpt Petra bij het kiezen van geschikte kleding op basis van de weersomstandigheden van de dag. Dit is in overeenstemming met haar unieke behoeften en voorkeuren.
+4. **Geurassociaties**: Het koppelen van geuren aan verschillende kledingstukken of outfits is een unieke functie die Petra's zintuiglijke ervaringen en voorkeuren respecteert. Dit draagt bij aan een persoonlijkere en meer betekenisvolle kledingselectie ervaring.
+5. **Individuele Kleding Kenmerken**: Voor het toevoegen van kleding op een zo individuele mogelijke manier, wordt er een gemakkelijke vragenlijst gecreëerd over kenmerken. Dit respecteert Petra's unieke kledingstijl en voorkeuren.
+
+Door deze stappen te nemen, wordt Petra's identiteit geprioriteerd in het ontwerp van het systeem.
+
+### Adding nonsense
+
+Welkom bij de "Mood-o-Meter". Dit is een innovatieve functie die interacteert met Petra afhankelijk van hoe hard of snel ze haar telefoon schudt. Zo genereert de app een specifieke emotie, dit biedt een unieke en persoonlijke dimensie aan Petra's ervaring.
+
+Bijvoorbeeld, een zachte schudbeweging kan een rustige of ontspannen emotie genereren, wat resulteert in een comfortabele en casual outfit suggestie. Aan de andere kant kan een snelle en krachtige schudbeweging een energieke of opgewonden emotie genereren, wat resulteert in een levendige en actieve outfit suggestie.
+
+Dit maakt de interactie met de app meer betrokken en fysiek, en stelt Petra in staat om haar emoties op een intuïtieve manier uit te drukken. Deze aanpak geeft ook een unieke draai aan het concept van "nonsense" door het toevoegen van een functionele en plezierige interactie.
 
