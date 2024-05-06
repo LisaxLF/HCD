@@ -154,3 +154,15 @@ Bijvoorbeeld, een zachte schudbeweging kan een rustige of ontspannen emotie gene
 
 Dit maakt de interactie met de app meer betrokken en fysiek, en stelt Petra in staat om haar emoties op een intuïtieve manier uit te drukken. Deze aanpak geeft ook een unieke draai aan het concept van "nonsense" door het toevoegen van een functionele en plezierige interactie.
 
+### Testpersoon
+Ik heb voor de laatste iteratie slag mijn zusje gevraagd om mij te helpen met waardevolle feedback te geven bij het testen van mijn app. Hier kwamen de volgende punten uit die mij kunnen helpen met eventuele verbeteringen in mijn design, naast feedback zater ook punten bij die goed werkte: Op basis van de feedback van de testpersoon en de reflectie op het ontwerp, zijn de volgende verbeterpunten geïdentificeerd:
+
+1. **Navigatie:** Het verbeteren van de duidelijkheid van de knoppen voor vooruit en achteruit navigatie kan de gebruikerservaring verbeteren. Het toevoegen van geluidseffecten kan hierbij helpen.
+2. **Emotie-gebaseerde matching:** Het verder verfijnen van de functie om outfits te matchen op basis van emoties kan de uniekheid en de bruikbaarheid van de applicatie verhogen. Overweeg om meer emoties toe te voegen of de gebruiker de mogelijkheid te geven om hun eigen emoties te definiëren.
+3. **Kledingstuk beschrijving:** Het mogelijk maken voor gebruikers om meerdere kleuren te beschrijven voor elk kledingstuk kan een nauwkeuriger beeld geven van de diversiteit aan kleuren in de gebruiker zijn of haar kledingkast.
+4. **Weerinformatie:** De functie om weerinformatie toe te voegen is zeer nuttig en kan verder uitgewerkt worden om gebruikers te helpen bij het aanpassen van hun outfit keuzes aan de omstandigheden.
+5. **Toegankelijkheidsnormen:** Het is belangrijk om ervoor te zorgen dat het ontwerp voldoet aan alle toegankelijkheidsnormen, zoals duidelijke labels en het vermijden van storende elementen.
+6. **Gebruik van kleur:** Hoewel kleurgebruik in dit geval niet direct relevant is voor Petra, is consistentie in kleurgebruik en het zorgen dat elke kleur een duidelijke betekenis heeft, relevant voor de mensen die haar helpen.
+7. **Flexibiliteit van het ontwerp:** Het ontwerp kan flexibeler worden gemaakt om zich aan te passen aan veranderingen in Petra's kledingcollectie, stemmingen en weersomstandigheden.
+8. **Trainingsmateriaal:** Het is belangrijk om duidelijke instructies of trainingsmateriaal te bieden om Petra te helpen leren hoe ze het systeem moet gebruiken. Dit kan een handleiding zijn, tutorial video's of zelfs een geïntegreerde tutorial in de app zelf.
+
