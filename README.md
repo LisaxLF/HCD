@@ -147,7 +147,6 @@ In het ontwerp zijn verschillende stappen genomen om Petra's identiteit te prior
 Door deze stappen te nemen, wordt Petra's identiteit geprioriteerd in het ontwerp van het systeem.
 
 ### Adding nonsense
-
 Welkom bij de "Mood-o-Meter". Dit is een innovatieve functie die interacteert met Petra afhankelijk van hoe hard of snel ze haar telefoon schudt. Zo genereert de app een specifieke emotie, dit biedt een unieke en persoonlijke dimensie aan Petra's ervaring.
 
 Bijvoorbeeld, een zachte schudbeweging kan een rustige of ontspannen emotie genereren, wat resulteert in een comfortabele en casual outfit suggestie. Aan de andere kant kan een snelle en krachtige schudbeweging een energieke of opgewonden emotie genereren, wat resulteert in een levendige en actieve outfit suggestie.
@@ -155,7 +154,7 @@ Bijvoorbeeld, een zachte schudbeweging kan een rustige of ontspannen emotie gene
 Dit maakt de interactie met de app meer betrokken en fysiek, en stelt Petra in staat om haar emoties op een intuïtieve manier uit te drukken. Deze aanpak geeft ook een unieke draai aan het concept van "nonsense" door het toevoegen van een functionele en plezierige interactie.
 
 ### Testpersoon
-Ik heb voor de laatste iteratie slag mijn zusje gevraagd om mij te helpen met waardevolle feedback te geven bij het testen van mijn app. Hier kwamen de volgende punten uit die mij kunnen helpen met eventuele verbeteringen in mijn design, naast feedback zater ook punten bij die goed werkte: Op basis van de feedback van de testpersoon en de reflectie op het ontwerp, zijn de volgende verbeterpunten geïdentificeerd:
+Ik heb voor de laatste iteratie slag mijn zusje gevraagd om mij te helpen met waardevolle feedback te geven bij het testen van mijn app. Hier kwamen de volgende punten uit die mij kunnen helpen met eventuele verbeteringen in mijn design, naast feedback zater ook punten bij die goed werkte:
 
 1. **Navigatie:** Het verbeteren van de duidelijkheid van de knoppen voor vooruit en achteruit navigatie kan de gebruikerservaring verbeteren. Het toevoegen van geluidseffecten kan hierbij helpen.
 2. **Emotie-gebaseerde matching:** Het verder verfijnen van de functie om outfits te matchen op basis van emoties kan de uniekheid en de bruikbaarheid van de applicatie verhogen. Overweeg om meer emoties toe te voegen of de gebruiker de mogelijkheid te geven om hun eigen emoties te definiëren.
